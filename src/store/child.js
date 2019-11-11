@@ -1,6 +1,9 @@
 export default {
   namespaced: true,
-  state: {},
+  state: {
+    isChild: true,
+    isDynamic: true,
+  },
   mutations: {},
   actions: {},
 };

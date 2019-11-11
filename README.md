@@ -22,7 +22,8 @@
 ```
 
 ## what does it reproduce?
-1. `yarn serve`
-2. open *Vue-devtools*
+1. `yarn install`
+2. `yarn serve`
+3. open *Vue-devtools* on browser
 
-When a [nested *vuex* module](https://vuex.vuejs.org/guide/modules.html#namespacing) is registered [*Dynamically*](https://vuex.vuejs.org/guide/modules.html#dynamic-module-registration) the whole *Vuex* section of latest *Vue-devtools* chrome extension stops working. The whole panel will appear as a blank panel. However, the nested modules themselves correctly observed as an existing reactive state.
+When a [nested *vuex* module](https://vuex.vuejs.org/guide/modules.html#namespacing) is registered [*Dynamically*](https://vuex.vuejs.org/guide/modules.html#dynamic-module-registration), the dynamically added store module would appear as a blank(non-existent) in *vue-devtools* but correctly observed by components; Other statically registered modules would appear alright on *vue-devtools*.
