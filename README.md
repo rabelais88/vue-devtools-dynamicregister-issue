@@ -1,4 +1,4 @@
-# VUE-DEVTOOLS issue with dynamically registered nested module.
+# VUE-DEVTOOLS issue with dynamically registered module.
 
 ## version info
 ```
@@ -27,4 +27,4 @@
 2. `yarn serve`
 3. open *Vue-devtools* on browser
 
-When a [nested *vuex* module](https://vuex.vuejs.org/guide/modules.html#namespacing) is registered [*Dynamically*](https://vuex.vuejs.org/guide/modules.html#dynamic-module-registration), the dynamically added store module would appear as a blank(non-existent) in *vue-devtools* but correctly observed by components; Other statically registered modules would appear alright on *vue-devtools*.
+When a store module is registered [*Dynamically*](https://vuex.vuejs.org/guide/modules.html#dynamic-module-registration), the dynamically added store module would appear as a blank(non-existent) in *vue-devtools* but correctly observed by components; Other statically registered modules would appear alright on *vue-devtools*.
