@@ -1,4 +1,4 @@
-# VUE-DEVTOOLS issue with dynamic register
+# VUE-DEVTOOLS issue with dynamically registered nested module.
 
 ## version info
 ```
@@ -22,6 +22,7 @@
 ```
 
 ## what does it reproduce?
+
 1. `yarn install`
 2. `yarn serve`
 3. open *Vue-devtools* on browser
