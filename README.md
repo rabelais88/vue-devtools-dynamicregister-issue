@@ -1,24 +1,28 @@
-# vuedevtools-issue-v4
+# VUE-DEVTOOLS issue with dynamic register
 
-## Project setup
+## version info
 ```
-yarn install
+  "dependencies": {
+    "core-js": "^3.3.2",
+    "vue": "^2.6.10",
+    "vuex": "^3.0.1"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^4.0.0",
+    "@vue/cli-plugin-eslint": "^4.0.0",
+    "@vue/cli-plugin-vuex": "^4.0.0",
+    "@vue/cli-service": "^4.0.0",
+    "@vue/eslint-config-airbnb": "^4.0.0",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^5.16.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "vue-template-compiler": "^2.6.10"
+  }
+// vue-devtools: 5.3.2(Oct, 30, 2019) - latest
 ```
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+## what does it reproduce?
+1. `yarn serve`
+2. open *Vue-devtools*
 
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+When a [nested *vuex* module](https://vuex.vuejs.org/guide/modules.html#namespacing) is registered [*Dynamically*](https://vuex.vuejs.org/guide/modules.html#dynamic-module-registration) the whole *Vuex* section of latest *Vue-devtools* chrome extension stops working. The whole panel will appear as a blank panel. However, the nested modules themselves correctly observed as an existing reactive state.
