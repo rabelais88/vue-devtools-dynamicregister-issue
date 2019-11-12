@@ -25,6 +25,8 @@
 
 1. `yarn install`
 2. `yarn serve`
-3. open *Vue-devtools* on browser
+3. open *Vue-devtools* on browser &rarr; without backward compatibility settings, dynamically registered modules will appear missing.
+4. (modules are dynamically registered internally via beforeMount)
+5. press buttons to provoke actions. actions will be muted. &rarr; even with backward compatibility settings
 
-When a store module is registered [*Dynamically*](https://vuex.vuejs.org/guide/modules.html#dynamic-module-registration), the dynamically added store module would appear as a blank(non-existent) in *vue-devtools* but correctly observed by components; Other statically registered modules would appear alright on *vue-devtools*.
+When a store module is registered [*Dynamically*](https://vuex.vuejs.org/guide/modules.html#dynamic-module-registration), the dynamically added store module would appear as a blank(non-existent) in *vue-devtools* but correctly observed by components; Other statically registered modules would appear alright on *vue-devtools*. also *vuex actions* inspection will be broken once a module is dynamically registered, with or without backward compatibility settings.
